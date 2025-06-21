@@ -23,85 +23,105 @@
 
     combos {
         compatible = "zmk,combos";
-
+        
         combo_lbkt {
             timeout-ms = <50>;
             key-positions = <14 15>;
             bindings = <&kp LBKT>;
+            layers = <0>;
         };
-
+        
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp RBKT>;
+            layers = <0>;
         };
-
+        
         combo_lpar {
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp LPAR>;
+            layers = <0>;
         };
-
+        
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
+            layers = <0>;
         };
-
+        
         combo_lbrc {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp LBRC>;
+            layers = <0>;
         };
-
+        
         combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp RBRC>;
-        };
+              timeout-ms = <50>;
+              key-positions = <18 19>;
+              bindings = <&kp RBRC>;
+              layers = <0>;
+          };
+          
+          combo_grave {
+              timeout-ms = <50>;
+              key-positions = <27 28>;
+              bindings = <&kp GRAVE>;
+              layers = <0>;
+          };
+          
+          combo_colon {
+              timeout-ms = <50>;
+              key-positions = <7 8>;
+              bindings = <&kp COLON>;
+              layers = <0>;
+          };
+          
+          combo_equal {
+              timeout-ms = <50>;
+              key-positions = <3 4>;
+              bindings = <&kp EQUAL>;
+              layers = <0>;
+          };
+          
+          combo_bslh {
+              timeout-ms = <50>;
+              key-positions = <31 32>;
+              bindings = <&kp BSLH>;
+              layers = <0>;
+          };
+          
+          combo_pipe {
+              timeout-ms = <50>;
+              key-positions = <32 33>;
+              bindings = <&kp PIPE>;
+              layers = <0>;
+          };
+          
+          combo_tilde {
+              timeout-ms = <50>;
+              key-positions = <26 27>;
+              bindings = <&kp TILDE>;
+              layers = <0>;
+          };
+          
+          combo_capsword {
+              timeout-ms = <50>;
+              key-positions = <15 19>;
+              bindings = <&caps_word>;
+              layers = <0>;
+          };
 
-        combo_grave {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp GRAVE>;
-        };
-
-        combo_colon {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindings = <&kp COLON>;
-        };
-
-        combo_equal {
-            timeout-ms = <50>;
-            key-positions = <3 4>;
-            bindings = <&kp EQUAL>;
-        };
-
-        combo_bslh {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&kp BSLH>;
-        };
-
-        combo_pipe {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&kp PIPE>;
-        };
-
-        combo_tilde {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp TILDE>;
-        };
-
-        combo_capsword {
-            timeout-ms = <50>;
-            key-positions = <15 19>;
-            bindings = <&caps_word>;
-        };
-    };
+          combo_layer3 {
+              timeout-ms = <50>;
+              key-positions = <37 38>;
+              bindings = <&mo 3>;
+              layers = <0>;
+          };
+      };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -109,34 +129,40 @@
                 default_layer {
                         display-name = "Base";
                         bindings = <
-   &kp TAB      &kp Q         &kp W         &kp E         &kp R         &kp T         &kp Y         &kp U         &kp I             &kp O       &kp P         &kp BSLH
-   &kp EQUAL    &hm LGUI A    &hm LALT S    &hm LSHIFT D  &hm LCTRL F   &kp G         &kp H         &hm RCTRL J   &hm RSHIFT K      &hm RALT L  &hm RGUI SEMI &kp SQT
-   &kp GRAVE    &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA         &kp DOT     &kp FSLH      &kp MINUS
-                                            &mo 1         &kp BSPC      &kp ESC       &kp RET       &kp SPACE     &mo 2
+   &kp TAB      &kp Q         &kp W         &kp E             &kp R         &kp T         &kp Y         &kp U         &kp I             &kp O       &kp P         &kp BSLH
+   &kp EQUAL    &hm LGUI A    &hm LALT S    &hm LSHIFT D      &hm LCTRL F   &kp G         &kp H         &hm RCTRL J   &hm RSHIFT K      &hm RALT L  &hm RGUI SEMI &kp SQT
+   &kp GRAVE    &kp Z         &kp X         &kp C             &kp V         &kp B         &kp N         &kp M         &kp COMMA         &kp DOT     &kp FSLH      &kp MINUS
+                                            &mo 1             &kp BSPC      &kp ESC       &kp RET       &kp SPACE     &mo 2
                         >;
                 };
                 lower_layer {
                         display-name = "Numbers";
                         bindings = <
-   &trans       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp N7        &kp N8            &kp N9      &kp N0        &trans
-   &trans       &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT     &kp CARET     &kp AMPS      &kp KP_MULTIPLY   &kp LPAR    &kp RPAR      &trans
-   &trans       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans            &trans      &trans        &trans
-                                            &trans        &trans        &trans        &trans        &trans        &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &kp N7        &kp N8            &kp N9      &trans          &trans
+   &trans       &kp EXCL      &kp AT        &kp HASH          &kp DLLR      &trans        &kp PLUS      &kp N4        &kp N5            &kp N6      &kp KP_MULTIPLY &trans
+   &trans       &kp CARET     &kp AMPS      &kp KP_MULTIPLY   &kp PRCNT     &trans        &kp MINUS     &kp N1        &kp N2            &kp N3      &kp FSLH        &trans
+                                            &trans            &trans        &trans        &kp EQUAL     &kp N0        &kp DOT
                         >;
                 };
 
                 raise_layer {
                         display-name = "System";
                         bindings = <
-   &trans       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans            &trans      &trans        &trans
-   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &trans        &kp LEFT      &kp DOWN      &kp UP            &kp RIGHT   &trans        &trans
-   &trans       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans            &trans      &trans        &trans
-                                            &trans        &trans        &trans        &trans        &trans        &trans
+   &bt BT_SEL 0 &trans        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans        &trans        &trans            &trans      &trans        &trans
+   &bt BT_SEL 1 &trans        &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans        &kp LEFT      &kp DOWN      &kp UP            &kp RIGHT   &trans        &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans            &trans      &trans        &trans
+                                            &trans            &trans        &trans        &trans        &trans        &trans
                         >;
                 };
 
                 extra_1 {
-                        status = "reserved";
+                        display-name = "Mouse";
+                        bindings = <
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &mmv MOVE_UP      &trans      &trans        &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT      &trans        &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &trans            &trans      &trans        &trans
+                                            &trans            &trans        &trans        &mkp MB3      &mkp MB2        &trans
+                        >;
                 };
 
                 extra_2 {
