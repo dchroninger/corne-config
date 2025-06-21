@@ -21,92 +21,87 @@
         };
     };
 
-        combos {
-            compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
-            // Brackets
-            combo_lbkt {
-                timeout-ms = <50>;
-                key-positions = <14 15>; // S + D
-                bindings = <&kp LBKT>;   // [
-            };
-
-            combo_rbkt {
-                timeout-ms = <50>;
-                key-positions = <20 21>; // K + L
-                bindings = <&kp RBKT>;   // ]
-            };
-
-            // Parentheses
-            combo_lpar {
-                timeout-ms = <50>;
-                key-positions = <15 16>; // D + F
-                bindings = <&kp LPAR>;   // (
-            };
-
-            combo_rpar {
-                timeout-ms = <50>;
-                key-positions = <19 20>; // J + K
-                bindings = <&kp RPAR>;   // )
-            };
-
-            // Braces
-            combo_lbrc {
-                timeout-ms = <50>;
-                key-positions = <16 17>; // F + G
-                bindings = <&kp LBRC>;   // {
-            };
-
-            combo_rbrc {
-                timeout-ms = <50>;
-                key-positions = <18 19>; // H + J
-                bindings = <&kp RBRC>;   // }
-            };
-
-            // Symbols
-            combo_grave {
-                timeout-ms = <50>;
-                key-positions = <27 28>; // C + V
-                bindings = <&kp GRAVE>;  // `
-            };
-
-            combo_colon {
-                timeout-ms = <50>;
-                key-positions = <7 8>;   // U + I
-                bindings = <&kp COLON>;  // :
-            };
-
-            combo_equal {
-                timeout-ms = <50>;
-                key-positions = <3 4>;   // E + R
-                bindings = <&kp EQUAL>;  // =
-            };
-
-            combo_bslh {
-                timeout-ms = <50>;
-                key-positions = <31 32>; // M + COMMA
-                bindings = <&kp BSLH>;   // \
-            };
-
-            combo_pipe {
-                timeout-ms = <50>;
-                key-positions = <32 33>; // COMMA + DOT
-                bindings = <&kp PIPE>;   // |
-            };
-
-            combo_tilde {
-                timeout-ms = <50>;
-                key-positions = <26 27>; // X + C
-                bindings = <&kp TILDE>;  // ~ 
-            };
-
-            // Caps Word
-            combo_capsword {
-                timeout-ms = <50>;
-                key-positions = <15 19>; // D (LSHIFT) + J (RSHIFT)
-                bindings = <&caps_word>; // Caps Word
-            };
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LBKT>;
         };
+
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp RBKT>;
+        };
+
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RBRC>;
+        };
+
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp GRAVE>;
+        };
+
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp COLON>;
+        };
+
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp EQUAL>;
+        };
+
+        combo_bslh {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp BSLH>;
+        };
+
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp PIPE>;
+        };
+
+        combo_tilde {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp TILDE>;
+        };
+
+        combo_capsword {
+            timeout-ms = <50>;
+            key-positions = <15 19>;
+            bindings = <&caps_word>;
+        };
+    };
 
         keymap {
                 compatible = "zmk,keymap";
