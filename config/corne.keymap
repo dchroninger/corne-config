@@ -11,18 +11,18 @@
 
 / {
     macros {
-        /* go_err_check: go_err_check { */
-        /*     compatible = "zmk,behavior-macro"; */
-        /*     #binding-cells = <0>; */
-        /*     bindings =  */
-        /*         <&macro_tap &kp RET>, */
-        /*         <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC>, */
-        /*         <&macro_tap &kp RET>, */
-        /*         <&macro_tap &kp TAB>, */
-        /*         <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R>, */
-        /*         <&macro_tap &kp RET>, */
-        /*         <&kp RBRC>; */
-        /* }; */
+        go_err_check: go_err_check {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp RET>,
+                <&macro_tap &kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC>,
+                <&macro_tap &kp RET>,
+                <&macro_tap &kp TAB>,
+                <&macro_tap &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R>,
+                <&macro_tap &kp RET>,
+                <&macro_tap &kp RBRC>;
+        };
 
         macro_equality: macro_equality {
             compatible = "zmk,behavior-macro";
@@ -212,9 +212,9 @@
 
         combo_go_err {
             timeout-ms = <50>;
-            key-positions = <10 11>; // P + \
-            bindings = <&kp A>;
-            layers = <1>; // Only on layer 1
+            key-positions = <10 11>;
+            bindings = <&go_err_check>;
+            layers = <1>;
         };
     };
 
