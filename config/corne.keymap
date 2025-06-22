@@ -15,12 +15,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_tap &kp RET>
-                <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC>
-                <&macro_tap &kp RET>
-                <&macro_tap &kp TAB>
-                <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R>
-                <&macro_tap &kp RET>
+                <&macro_tap &kp RET>,
+                <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC>,
+                <&macro_tap &kp RET>,
+                <&macro_tap &kp TAB>,
+                <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R>,
+                <&macro_tap &kp RET>,
                 <&kp RBRC>;
         };
 
