@@ -10,6 +10,43 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    macros {
+        go_err_check: go_err_check {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R &kp RET &kp RBRC>;bindings = <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LBRC &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp E &kp R &kp R &kp RET &kp RBRC>;
+        };
+        macro_equality: macro_equality {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL>;
+        };
+        
+        macro_not_equal: macro_not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+        };
+        
+        macro_arrow_func: macro_arrow_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+        };
+        
+        macro_arrow: macro_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+        };
+
+        macro_declare_assign: macro_declare_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+        };
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -83,8 +120,43 @@
         
         combo_equal {
             timeout-ms = <50>;
-            key-positions = <3 4>;
+            key-positions = <4 5>; // R + T  
             bindings = <&kp EQUAL>;
+            layers = <0>;
+        };
+
+        combo_equality {
+            timeout-ms = <50>;
+            key-positions = <3 4>; // E + R
+            bindings = <&macro_equality>; // ==
+            layers = <0>;
+        };
+
+        combo_not_equal {
+            timeout-ms = <50>;
+            key-positions = <2 3>; // W + E
+            bindings = <&macro_not_equal>; // !=
+            layers = <0>;
+        };
+
+        combo_arrow_func {
+            timeout-ms = <50>;
+            key-positions = <1 2>; // Q + W
+            bindings = <&macro_arrow_func>; // =>
+            layers = <0>;
+        };
+
+        combo_declare_assign {
+            timeout-ms = <50>;
+            key-positions = <6 7>; // Y + U
+            bindings = <&macro_declare_assign>; // :=
+            layers = <0>;
+        };
+
+        combo_arrow {
+            timeout-ms = <50>;
+            key-positions = <33 34>; // . + /
+            bindings = <&macro_arrow>; // ->
             layers = <0>;
         };
         
@@ -128,6 +200,13 @@
             key-positions = <37 38>;
             bindings = <&mo 3>;
             layers = <0>;
+        };
+
+        combo_go_err {
+            timeout-ms = <50>;
+            key-positions = <10 11>; // P + \
+            bindings = <&go_err_check>;
+            layers = <1>; // Only on layer 1
         };
     };
 
