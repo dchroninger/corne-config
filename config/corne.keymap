@@ -213,7 +213,7 @@
         combo_go_err {
             timeout-ms = <50>;
             key-positions = <10 11>; // P + \
-            bindings = <&go_err_check>;
+            bindings = <&kp A>;
             layers = <1>; // Only on layer 1
         };
     };
