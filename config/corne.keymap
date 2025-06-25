@@ -49,7 +49,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <240>;  // Increased from 150ms
             quick-tap-ms = <175>;     // Added quick-tap threshold
-            flavor = "balanced";      // Changed from tap-preferred
+            /* flavor = "balanced";      // Changed from tap-preferred */
             bindings = <&kp>, <&kp>;
         };
     };
@@ -120,41 +120,6 @@
             layers = <0>;
         };
 
-        combo_equality {
-            timeout-ms = <50>;
-            key-positions = <3 4>; // E + R
-            bindings = <&macro_equality>; // ==
-            layers = <0>;
-        };
-
-        combo_not_equal {
-            timeout-ms = <50>;
-            key-positions = <2 3>; // W + E
-            bindings = <&macro_not_equal>; // !=
-            layers = <0>;
-        };
-
-        combo_arrow_func {
-            timeout-ms = <50>;
-            key-positions = <1 2>; // Q + W
-            bindings = <&macro_arrow_func>; // =>
-            layers = <0>;
-        };
-
-        combo_declare_assign {
-            timeout-ms = <50>;
-            key-positions = <6 7>; // Y + U
-            bindings = <&macro_declare_assign>; // :=
-            layers = <0>;
-        };
-
-        combo_arrow {
-            timeout-ms = <50>;
-            key-positions = <33 34>; // . + /
-            bindings = <&macro_arrow>; // ->
-            layers = <0>;
-        };
-        
         combo_bslh {
             timeout-ms = <50>;
             key-positions = <31 32>;
@@ -180,13 +145,6 @@
             timeout-ms = <50>;
             key-positions = <15 20>;
             bindings = <&caps_word>;
-            layers = <0>;
-        };
-
-        combo_capslock {
-            timeout-ms = <50>;
-            key-positions = <16 19>; // F + J
-            bindings = <&kp CAPS>;
             layers = <0>;
         };
 
