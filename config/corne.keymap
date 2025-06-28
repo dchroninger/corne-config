@@ -149,7 +149,7 @@
             key-positions = <36 41>;
             bindings = <&tog 4>;
             layers = <0 4>;
-        }
+        };
     };
 
     keymap {
