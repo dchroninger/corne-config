@@ -50,105 +50,90 @@
             timeout-ms = <50>;
             key-positions = <14 15>;
             bindings = <&kp LBKT>;
-            layers = <0 4>;
         };
         
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp RBKT>;
-            layers = <0 4>;
         };
         
         combo_lpar {
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp LPAR>;
-            layers = <0 4>;
         };
         
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
-            layers = <0 4>;
         };
         
         combo_lbrc {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp LBRC>;
-            layers = <0 4>;
         };
         
         combo_rbrc {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp RBRC>;
-            layers = <0 4>;
         };
         
         combo_grave {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp GRAVE>;
-            layers = <0 4>;
         };
         
         combo_colon {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp COLON>;
-            layers = <0 4>;
         };
         
         combo_equal {
             timeout-ms = <50>;
             key-positions = <4 5>; // R + T  
             bindings = <&kp EQUAL>;
-            layers = <0 4>;
         };
 
         combo_bslh {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp BSLH>;
-            layers = <0 4>;
         };
         
         combo_pipe {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&kp PIPE>;
-            layers = <0 4>;
         };
         
         combo_tilde {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp TILDE>;
-            layers = <0 4>;
         };
         
         combo_capsword {
             timeout-ms = <50>;
             key-positions = <15 20>;
             bindings = <&caps_word>;
-            layers = <0 4>;
         };
 
         combo_layer3 {
             timeout-ms = <50>;
             key-positions = <37 38>;
             bindings = <&mo 3>;
-            layers = <0 4>;
         };
 
         qwerty_toggle { 
             timeout-ms = <50>;
             key-positions = <36 41>;
             bindings = <&tog 4>;
-            layers = <0 4>;
         };
     };
 
