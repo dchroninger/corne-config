@@ -88,13 +88,13 @@
             bindings = <&caps_word>;
         };
 
-        combo_layer3 {
+        mouse_layer {
             timeout-ms = <50>;
             key-positions = <37 38>;
-            bindings = <&mo 4>;
+            bindings = <&mo 1>;
         };
 
-        colemak_toggle { 
+        unreal_toggle { 
             timeout-ms = <50>;
             key-positions = <36 41>;
             bindings = <&tog 4>;
@@ -114,13 +114,13 @@
             >;
         };
 
-        colemak {
-            display-name = "Colemak";
+        mouse_layer {
+            display-name = "Mouse";
             bindings = <
-   &kp TAB      &kp Q         &kp W         &kp F             &kp P         &kp B         &kp J         &kp L         &kp U             &kp Y               &kp SEMI        &kp BSLH
-   &kp EQUAL    &hm LGUI A    &hm LALT R    &hms LSHIFT S     &hm LCTRL T   &kp G         &kp M         &hm RCTRL N   &hms RSHIFT E     &hm RALT I          &hm RGUI O      &kp SQT
-   &kp GRAVE    &kp Z         &kp X         &kp C             &kp D         &kp V         &kp K         &kp H         &kp COMMA         &kp DOT             &kp FSLH        &kp MINUS
-                                            &mo 2             &kp BSPC      &kp ESC       &kp RET       &kp SPACE     &mo 3
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &mmv MOVE_UP      &trans            &trans          &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans          &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &trans            &trans            &trans          &trans
+                                            &trans            &trans        &trans        &mkp LCLK     &mkp RCLK       &trans
             >;
         };
 
