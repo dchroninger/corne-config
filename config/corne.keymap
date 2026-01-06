@@ -10,6 +10,14 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    macros {
+        macro_declare_assign: macro_declare_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+        };
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -73,7 +81,43 @@
             key-positions = <18 19>;
             bindings = <&kp RBRC>;
         };
-      
+        
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp GRAVE>;
+        };
+        
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp COLON>;
+        };
+        
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <4 5>; // R + T  
+            bindings = <&kp EQUAL>;
+        };
+
+        combo_bslh {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp BSLH>;
+        };
+        
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp PIPE>;
+        };
+        
+        combo_tilde {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp TILDE>;
+        };
+        
         combo_capsword {
             timeout-ms = <50>;
             key-positions = <15 20>;
@@ -136,13 +180,14 @@
             >;
         };
 
-        unreal_layer {
-            display-name = "Unreal";
+        mouse_layer {
+            display-name = "Mouse";
             bindings = <
-   &kp TAB      &kp Q         &kp W         &kp E             &kp R         &kp T         &kp Y         &kp U         &kp I             &kp O               &kp P           &kp BSLH
-   &kp EQUAL    &kp A         &kp S         &hms LSHIFT D     &kp F         &kp G         &kp H         &kp J         &hms RSHIFT K     &kp L               &kp SEMI        &kp SQT
-   &kp GRAVE    &kp Z         &kp X         &kp C             &kp V         &kp B         &kp N         &kp M         &kp COMMA         &kp DOT             &kp FSLH        &kp MINUS
-                                            &mo 2             &kp BSPC      &kp ESC       &kp RET       &kp SPACE     &mo 3
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &mmv MOVE_UP      &trans            &trans          &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans          &trans
+   &trans       &trans        &trans        &trans            &trans        &trans        &trans        &trans          &trans            &trans            &trans          &trans
+                                            &trans            &trans        &trans        &mkp LCLK     &mkp RCLK       &trans
             >;
         };
+    };
 };
