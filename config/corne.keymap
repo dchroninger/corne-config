@@ -147,10 +147,10 @@
         limited_hrm {
             display-name = "Gaming";
             bindings = <
-   &kp TAB      &kp Q         &kp W         &kp E             &kp R         &kp T         &kp Y         &kp U         &kp I             &kp O               &kp P           &kp BSLH
-   &kp EQUAL    &kp A         &kp S         &kp D             &kp F         &kp G         &kp H         &kp J         &kp K             &kp L               &kp SEMI        &kp SQT
-   &kp GRAVE    &kp Z         &kp X         &kp C             &kp V         &kp B         &kp N         &kp M         &kp COMMA         &kp DOT             &kp FSLH        &kp MINUS
-                                            &kp LSHIFT        &kp LCTRL     &kp SPACE     &kp RET       &kp SPACE     &mo 3
+   &kp ESC      &kp M         &kp Q         &kp W             &kp E         &kp R         &kp Y         &kp U         &kp I             &kp O               &kp P           &kp BSLH
+   &kp K        &kp TAB       &kp A         &kp S             &kp D         &kp SEMI      &kp H         &kp J         &kp K             &kp L               &kp SEMI        &kp SQT
+   &kp U        &kp Z         &kp J         &kp COMMA         &kp C         &kp I         &kp N         &kp M         &kp COMMA         &kp DOT             &kp FSLH        &kp MINUS
+                                            &kp SPACE         &kp LCTRL     &kp LSHIFT    &kp RET       &kp SPACE     &mo 3
             >;
         };
     };
